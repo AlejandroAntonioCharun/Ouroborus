@@ -27,7 +27,7 @@ const ServicesSection = () => {
 
           {/* Image */}
           <div className="relative">
-            <div className="rounded-2xl overflow-hidden">
+            <div className="rounded-2xl overflow-hidden ">
               <img
                 src={servicesImage}
                 alt="Servicios digitales"
@@ -130,6 +130,25 @@ a los objetivos estratégicos de tu negocio.
 
                 <p className="inline text-gray-500 ml-2">
                     Evaluamos y fortalecemos la seguridad de la información para proteger los datos críticos y garantizar el cumplimiento normativo.
+                </p>
+
+                {/* Líneas decorativas */}
+                <div className="mt-4 mb-3 flex items-center gap-3">
+                    {/* HR corto */}
+                    <hr className="w-10 border-slate-500 " />
+
+                    {/* HR largo */}
+                    <hr className="w-full border-black/20" />
+                </div>
+            </div>
+
+            <div>
+                <h3 className="text-xl font-semibold text-black inline">
+                    Inteligencia Artificial
+                </h3>
+
+                <p className="inline text-gray-500 ml-2">
+                    Impulsa tu negeocio automatizando procesos con IA
                 </p>
 
                 {/* Líneas decorativas */}

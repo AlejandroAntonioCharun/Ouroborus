@@ -1,16 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Zalando+Sans+Expanded:ital,wght@0,200..900;1,200..900&display=swap');
+
 @import "tailwindcss";
 
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
-  color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  background-color: #fff;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* ICONO */
+.music-border {
+  position: relative;
+  border-radius: 9999px;
+  padding: 2px;
+}
+
+.music-border::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, #000, #b91c1c, #000);
+  border-radius: inherit;
+  animation: spin 6s linear infinite;
+}
+
+.music-inner {
+  position: relative;
+  z-index: 1;
+  border-radius: inherit;
+  background: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(12px);
+}
+
+/* PLAYER */
+.player-border {
+  position: relative;
+  border-radius: 16px;
+  padding: 3px;
+}
+
+.player-border::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, #000, #b91c1c, #000);
+  border-radius: inherit;
+  animation: spin 8s linear infinite;
+}
+
+.player-inner {
+  position: relative;
+  z-index: 1;
+  border-radius: inherit;
+  overflow: hidden;
 }

@@ -24,14 +24,14 @@ const Navbar = () => {
 
                 />
                 <span className="text-white font-bold text-xl tracking-tight">
-                    Ouroboros.
+                    <Link to="/">Ouroboros.</Link>
                 </span>
             </div>
 
 
           <div className="flex items-center gap-3">
             <button className="hidden sm:block rounded-full bg-white px-4 py-1.5 text-sm font-medium text-black hover:bg-gray-200 transition">
-              Contáctanos
+              <Link to="/contactanos">Contáctanos</Link>
             </button>
 
             <button className="rounded-full border border-neutral-900 p-2 text-white hover:bg-neutral-950 transition">
@@ -51,9 +51,10 @@ const Navbar = () => {
       {/* Mega menu */}
       <div
         className={`
-          overflow-hidden
-          transition-all duration-300 ease-out
-          ${open ? "max-h-[1000px] opacity-100 translate-y-0" : "max-h-0 opacity-0 -translate-y-4"}
+         transition-all duration-300 ease-out
+          ${open
+            ? "max-h-screen overflow-y-auto opacity-100 translate-y-0"
+            : "max-h-0 overflow-hidden opacity-0 -translate-y-4"}
         `}
       >
         <div className="bg-black border-t border-neutral-900">
@@ -62,10 +63,9 @@ const Navbar = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 w-full">
             {[
               { label: "Inicio", to: "/" },
-              { label: "Proyectos", to: "/blog" },
-              { label: "Servicios", to: "/about" },
-              { label: "Sobre Nosotros", to: "/process" },
-              { label: "Contactanos", to: "/blog" },
+              { label: "Servicios", to: "/servicios" },
+              { label: "Sobre Nosotros", to: "/Sobre-Nosotros" },
+              { label: "Contactanos", to: "/contactanos" },
             ].map((item) => (
               <Link
                 key={item.label}
@@ -106,7 +106,7 @@ const Navbar = () => {
             </div>
 
             {/* Social */}
-            <div>
+            <div className="mb-12">
               <p className="mb-4 font-semibold text-white">Siguenos en</p>
 
               <div className="flex gap-1">
